@@ -1,9 +1,11 @@
+// Rectangle Struct
 struct Rectangle {
     width: u32,
     height: u32,
 }
-
+// Implementation (Block) for rectangle Struct
 impl Rectangle {
+    // Methods
     fn area(&self) -> u32 {
         self.width * self.height
     }
@@ -11,7 +13,9 @@ impl Rectangle {
         self.height > other.height && self.width > other.width
     }
 }
+// Separate Implementation Block still based on the Rectangle Struct
 impl Rectangle {
+    // Associated function
     fn create_square(size: u32) -> Rectangle {
         Rectangle {
             width: size,
@@ -19,11 +23,12 @@ impl Rectangle {
         }
     }
 }
-
+// Student struct
 struct Student {
     name: String,
     id: u32,
 }
+// Implementation block for Student struct
 impl Student {
     fn output_details(&self) -> String {
         format!("Name: {}, ID: {}", self.name, self.id)
@@ -52,8 +57,6 @@ fn main() {
     };
 
     student.name = String::from("Rogan");
-
-
 
     let square_rect: Rectangle = Rectangle::create_square(20);
 
