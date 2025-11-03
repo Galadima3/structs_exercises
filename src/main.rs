@@ -25,8 +25,8 @@ struct Student {
     id: u32,
 }
 impl Student {
-    fn output_details(&self) -> String{
-       format!("Name: {}, ID: {}", self.name, self.id)
+    fn output_details(&self) -> String {
+        format!("Name: {}, ID: {}", self.name, self.id)
     }
 }
 
@@ -46,10 +46,14 @@ fn main() {
         height: 40,
     };
 
-    let student = Student {
+    let mut student = Student {
         name: String::from("Jamie"),
-        id: 2050
+        id: 2050,
     };
+
+    student.name = String::from("Rogan");
+
+
 
     let square_rect: Rectangle = Rectangle::create_square(20);
 
@@ -57,5 +61,5 @@ fn main() {
     println!("Area of Square Rect = {}", square_rect.area());
     println!("{}", rect1.can_hold(&rect2));
     println!("{}", rect1.can_hold(&rect3));
-   println!("Student Details => {}", student.output_details());
+    println!("Student Details => {}\n", student.output_details());
 }
